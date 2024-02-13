@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.udilov.it'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter:5.10.2',
+            'com.codeborne:selenide:7.1.0',
+            //'com.github.javafaker:javafaker:1.0.2'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
